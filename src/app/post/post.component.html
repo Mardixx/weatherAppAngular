@@ -1,0 +1,7 @@
+<form class="form">
+    <input type="text" name="cityTextInput" placeholder="City to search..." [(ngModel)]="inputField">
+    <input type="submit" value="Forecast" (click)="$event.preventDefault();fetchPosts()">
+</form>
+<div *ngFor="let post of posts">
+    <span>{{ post }}</span>
+</div>
