@@ -1,0 +1,39 @@
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    .formText {
+        padding: 1rem;
+        width: 80%;
+        font-size: 2vw;
+    }
+    .formButton {
+        padding: 1rem;
+        width: 10%;
+        font-size: 1.5vw;
+    }
+}
+.nameDiv {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.allDetailsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1vw;
+    width: 100%;
+    padding-top: 3rem;
+    div {
+        display: flex;
+        flex-direction: column;
+        .temps {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+    }
+}

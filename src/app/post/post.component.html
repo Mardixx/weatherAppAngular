@@ -1,7 +1,18 @@
 <form class="form">
-    <input type="text" name="cityTextInput" placeholder="City to search..." [(ngModel)]="inputField">
-    <input type="submit" value="Forecast" (click)="$event.preventDefault();fetchPosts()">
+    <input class="formText" type="text" name="cityTextInput" placeholder="City to search..." [(ngModel)]="inputField">
+    <input class="formButton" type="submit" value="Forecast" (click)="$event.preventDefault();fetchPosts()" onsubmit="fetchClear()">
 </form>
-<div *ngFor="let post of posts">
-    <span>{{ post }}</span>
+<div class="nameDiv" *ngFor="let things of response">
+    <span>{{ things.city.name }}, {{ things.city.country }}</span>
+</div>
+<div class="allDetailsDiv">
+    <div *ngFor="let infos of weather">
+        <span>{{ infos.dt_txt | date:'fullDate' }}</span>
+        <span>Wind: {{ infos.wind.speed }}km/h</span>
+        <span>{{ infos.weather[0].main }}, {{ infos.weather[0].description }}</span>
+        <div class="temps">
+            <span class="feeling">Feels like: {{ infos.main.feels_like }}°C</span>
+            <span class="temp">Temperature: {{ infos.main.temp }}°C</span>
+        </div>
+    </div>
 </div>
