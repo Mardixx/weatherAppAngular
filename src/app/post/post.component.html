@@ -6,8 +6,8 @@
     <span>{{ things.city.name }}, {{ things.city.country }}</span>
 </div>
 <div class="allDetailsDiv">
-    <div *ngFor="let infos of weather">
-        <span>{{ infos.dt_txt | date:'fullDate' }}</span>
+    <div *ngFor="let infos of weather" class="infos">
+        <span class="dateSpan">{{ infos.dt_txt | date:'fullDate' }}</span>
         <span>Wind: {{ infos.wind.speed }}km/h</span>
         <span>{{ infos.weather[0].main }}, {{ infos.weather[0].description }}</span>
         <div class="temps">
